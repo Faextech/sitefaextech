@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MetaPixel from "@/components/MetaPixel";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="min-h-screen bg-faex-navy antialiased">
+        <MetaPixel />
         {children}
         <WhatsAppButton />
       </body>
