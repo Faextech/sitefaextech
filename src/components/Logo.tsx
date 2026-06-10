@@ -1,31 +1,26 @@
 import Image from "next/image";
 
 interface LogoProps {
-  variant?: "full" | "icon";
   className?: string;
+  size?: "sm" | "md" | "lg";
 }
 
-export default function Logo({ variant = "full", className = "" }: LogoProps) {
-  if (variant === "icon") {
-    return (
-      <Image
-        src="/logo-faex.png"
-        alt="Faex Tech"
-        width={160}
-        height={48}
-        className={`h-9 w-auto object-contain object-left ${className}`}
-        priority
-      />
-    );
-  }
+const sizes = {
+  sm: { width: 140, height: 40, className: "h-8" },
+  md: { width: 180, height: 52, className: "h-9 sm:h-10" },
+  lg: { width: 220, height: 64, className: "h-11 sm:h-12" },
+} as const;
+
+export default function Logo({ className = "", size = "md" }: LogoProps) {
+  const { width, height, className: sizeClass } = sizes[size];
 
   return (
     <Image
       src="/logo-faex.png"
       alt="Faex Tech"
-      width={200}
-      height={56}
-      className={`h-10 w-auto object-contain object-left sm:h-11 ${className}`}
+      width={width}
+      height={height}
+      className={`w-auto object-contain object-left ${sizeClass} ${className}`}
       priority
     />
   );
