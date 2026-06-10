@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Logo />
+            <Logo size="lg" />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-faex-text-muted">
               Empresa de tecnologia do {SITE.groupName}, especializada em gestão,
               automação e desenvolvimento de soluções integradas. Transformamos

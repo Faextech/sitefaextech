@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-faex-navy pt-20"
+      className="relative flex min-h-screen items-center overflow-hidden bg-faex-navy pt-28 sm:pt-32 lg:pt-36"
     >
       <TechBackground variant="hero" />
 

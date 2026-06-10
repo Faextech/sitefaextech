@@ -32,9 +32,9 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <a href="#home" className="flex-shrink-0" onClick={closeMenu}>
-          <Logo />
+          <Logo size="xl" />
         </a>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -68,7 +68,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 top-[72px] z-40 border-t border-white/5 bg-faex-navy/98 backdrop-blur-xl lg:hidden">
+        <div className="fixed inset-0 top-[88px] z-40 border-t border-white/5 bg-faex-navy/98 backdrop-blur-xl sm:top-[104px] lg:hidden">
           <nav className="flex flex-col gap-1 px-4 py-6">
             {NAV_LINKS.map((link) => (
               <a
