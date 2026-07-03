@@ -1,52 +1,39 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import { Exo_2 } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import MetaPixel from "@/components/MetaPixel";
-import GoogleAds from "@/components/GoogleAds";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const exo2 = Exo_2({
+  variable: "--font-exo",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} | ${SITE.headline}`,
-    template: `%s | ${SITE.name}`,
+    default: `${SITE.shortName} | ${SITE.headline}`,
+    template: `%s | ${SITE.shortName}`,
   },
   description: SITE.description,
   keywords: [
-    "Faex Tech",
-    "desenvolvimento de software",
-    "sistemas sob medida",
-    "automação de processos",
-    "inteligência artificial",
-    "agentes de IA",
-    "sites institucionais",
-    "e-commerce",
-    "landing pages",
-    "CRM",
-    "telefonia VoIP",
-    "integrações",
-    "Business Intelligence",
+    "3 HouseHub",
+    "3HB",
+    "integração de sistemas",
     "consultoria tecnológica",
-    "soluções SaaS",
-    "Pinhais",
-    "Paraná",
+    "desenvolvimento de software",
+    "inteligência artificial",
+    "automação",
+    "B2B",
+    "tecnologia",
   ],
-  authors: [{ name: SITE.name }],
   openGraph: {
-    title: `${SITE.name} | ${SITE.headline}`,
+    title: `${SITE.shortName} | ${SITE.headline}`,
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,
@@ -60,12 +47,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${montserrat.variable}`}>
-      <body className="min-h-screen bg-faex-navy antialiased">
+    <html lang="pt-BR" className={exo2.variable}>
+      <body className="min-h-screen bg-white font-sans antialiased text-foreground">
         <MetaPixel />
-        <GoogleAds />
-        {children}
-        <WhatsAppButton />
+        <SmoothScrollProvider>
+          <Header />
+          <main className="bg-white">{children}</main>
+          <Footer />
+          <WhatsAppFloat />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

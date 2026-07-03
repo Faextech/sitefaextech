@@ -1,33 +1,36 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Process from "@/components/Process";
-import Solutions from "@/components/Solutions";
-import Ecosystem from "@/components/Ecosystem";
-import Platform from "@/components/Platform";
-import AISection from "@/components/AISection";
-import About from "@/components/About";
-import GroupTrust from "@/components/GroupTrust";
-import WhyChoose from "@/components/WhyChoose";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+import HeroSection from "@/components/hero/HeroSection";
+import HeroIntroSection from "@/sections/home/HeroIntroSection";
+import VisionSection from "@/sections/home/VisionSection";
+import CapabilitiesSection from "@/sections/home/CapabilitiesSection";
+import IntegrationSection from "@/sections/home/IntegrationSection";
+import CasesSection from "@/sections/home/CasesSection";
+import StatsSection from "@/sections/home/StatsSection";
+import TechnologyGridSection from "@/sections/home/TechnologyGridSection";
+import ProcessSection from "@/sections/home/ProcessSection";
+import TestimonialsSection from "@/sections/home/TestimonialsSection";
+import HomeCtaSection from "@/sections/home/HomeCtaSection";
+import { SITE } from "@/lib/constants";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Home",
+  description: SITE.description,
+};
+
+export default function HomePage() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <Process />
-        <Solutions />
-        <Ecosystem />
-        <Platform />
-        <AISection />
-        <About />
-        <GroupTrust />
-        <WhyChoose />
-        <Contact />
-      </main>
-      <Footer />
+      <HeroSection />
+      <HeroIntroSection />
+      <VisionSection />
+      <CapabilitiesSection />
+      <IntegrationSection />
+      <CasesSection />
+      <StatsSection />
+      <TechnologyGridSection />
+      <ProcessSection />
+      <TestimonialsSection />
+      <HomeCtaSection />
     </>
   );
 }

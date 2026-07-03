@@ -1,453 +1,163 @@
-import type { LucideIcon } from "lucide-react";
-import {
-  Code2,
-  Monitor,
-  Building2,
-  Layers,
-  Cloud,
-  Globe,
-  Layout,
-  ShoppingCart,
-  Users,
-  Workflow,
-  Plug,
-  Brain,
-  Bot,
-  Phone,
-  MessageCircle,
-  BarChart3,
-  Lightbulb,
-  Search,
-  PenTool,
-  Rocket,
-  Headphones,
-} from "lucide-react";
-
 export const SITE = {
-  name: "Faex Tech",
-  tagline: "Tecnologia, automação e inovação para impulsionar resultados",
-  headline: "Transformamos processos em tecnologia",
+  name: "3 HouseHub",
+  shortName: "3HB",
+  headline: "Construindo o futuro das operações empresariais",
   description:
-    "Empresa de tecnologia especializada em gestão, automação e desenvolvimento de soluções integradas. Do site institucional ao sistema complexo de gestão — analisamos seu negócio e criamos a tecnologia certa.",
-  url: "https://faextech.com.br",
+    "A 3 HouseHub conecta tecnologia, estratégia e execução para criar soluções escaláveis e precisas para empresas B2B.",
+  url: "https://3househub.com.br",
   email: "master@faextech.com.br",
+  phone: "+554135283876",
+  phoneDisplay: "+55 41 3528-3876",
   whatsapp: "554135283876",
   whatsappDisplay: "+55 41 3528-3876",
-  address: "Edifício Espanha (Ed Espanha), Centro, Pinhais - PR, 83323-410",
-  addressShort: "Ed. Espanha, Centro — Pinhais - PR",
+  address: {
+    street: "Edifício Espanha (Ed Espanha), Centro",
+    city: "Pinhais",
+    state: "PR",
+    zip: "83323-410",
+    country: "Brasil",
+    full: "Edifício Espanha (Ed Espanha), Centro, Pinhais - PR, 83323-410",
+  },
   mapsQuery: "Ed+Espanha,+Centro,+Pinhais+-+PR,+83323-410",
-  groupName: "Grupo Faex",
-} as const;
-
-export const GRUPO_FAEX = {
-  title: "Faex Tech faz parte do Grupo Faex",
-  description:
-    "Somos o braço de tecnologia de um grupo empresarial consolidado. Isso nos dá estrutura, experiência operacional real e capacidade de inovar com segurança.",
-  testingTitle: "Testadas antes de chegar ao mercado",
-  testingDescription:
-    "Nenhuma solução nossa é lançada comercialmente antes de ser testada intensamente nas empresas do Grupo Faex. Só depois de validada em operações reais é que levamos a tecnologia para nossos clientes.",
+  instagram: "https://www.instagram.com/3househub/",
+  hours: "Segunda a Sexta, 9h às 18h",
+  heroVideo: "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-futuristic-devices-99786-large.mp4",
+  heroVideoPoster: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+  heroLaunchVideo: "/videos/3househub-lancamento-4k.mp4",
 } as const;
 
 export const NAV_LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#processo", label: "Como Atuamos" },
-  { href: "#solucoes", label: "Soluções" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#contato", label: "Contato" },
+  { href: "/", label: "Home" },
+  { href: "/sobre", label: "Sobre" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/cases", label: "Cases" },
+  { href: "/contato", label: "Contato" },
 ] as const;
 
-export const FOOTER_LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#processo", label: "Como Atuamos" },
-  { href: "#solucoes", label: "Soluções" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#contato", label: "Contato" },
+export const SOCIAL_LINKS = [
+  { name: "Instagram", href: "https://www.instagram.com/3househub/", icon: "instagram" as const },
 ] as const;
 
-export const COMPANY_STATS = [
-  { value: "15+", label: "Áreas de atuação" },
-  { value: "360°", label: "Visão do negócio" },
-  { value: "100%", label: "Sob medida" },
-  { value: "24/7", label: "Suporte dedicado" },
+export const PROBLEM_BULLETS = [
+  "Soluções sob medida para o seu jeito de operar.",
+  "Pare de se adaptar ao sistema. Faça o sistema se adaptar a você.",
+  "Automatize processos. Integre tudo. Ganhe controle e precisão.",
+] as const;
+
+export const WHY_CHOOSE = [
+  {
+    title: "Elimine silos de dados",
+    description:
+      "Conectamos seu ecossistema ao que você já usa (ERP, CRM, financeiro, APIs). Dados fluem de ponta a ponta, com rastreamento e segurança — sem planilhas paralelas.",
+    cta: "Solicitar orçamento",
+    icon: "git-merge",
+  },
+  {
+    title: "Feito sob medida de verdade",
+    description:
+      "Modelamos o fluxo do seu negócio e entregamos funcionalidades que você realmente usa, não pacotes genéricos ou ferramentas que não conversam entre si.",
+    cta: "Avaliar meu projeto",
+    icon: "settings",
+  },
+  {
+    title: "IA aplicada ao processo",
+    description:
+      "Integramos inteligência artificial onde faz diferença: automatize o manual, obtenha análises mais profundas e decisões mais rápidas dentro do seu ecossistema.",
+    cta: "Falar com especialista",
+    icon: "brain",
+  },
+] as const;
+
+export const INTEGRATION_FEATURES = [
+  "APIs REST & GraphQL",
+  "Cloud AWS, Azure & GCP",
+  "ERP, CRM e gateways de pagamento",
+  "Middleware e webhooks em tempo real",
+  "Monitoramento e logs centralizados",
+] as const;
+
+export const INTEGRATION_IMAGES = [
+  {
+    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    alt: "Infraestrutura cloud conectada",
+    label: "Cloud",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    alt: "Servidores e data center",
+    label: "Infraestrutura",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+    alt: "Desenvolvimento de APIs e integrações",
+    label: "APIs REST",
+  },
+] as const;
+
+export const COMPANY_COUNTERS = [
+  { value: 8, suffix: "+", label: "Anos de experiência" },
+  { value: 150, suffix: "+", label: "Projetos entregues" },
+  { value: 40, suffix: "+", label: "Integrações ativas" },
+  { value: 99.9, suffix: "%", label: "Uptime médio" },
+] as const;
+
+export const DELIVERABLES = [
+  { title: "Integrações sem planilhas", description: "ERP, financeiro, CRM e APIs conversando entre si — dados fluindo de ponta a ponta." },
+  { title: "Relatórios customizáveis", description: "Filtros, campos calculados e exportação em um clique para decisões baseadas em dados." },
+  { title: "Automação de rotinas", description: "O repetitivo vira fluxo automático. Menos erros, mais tempo no que gera resultado." },
+  { title: "Dashboards em tempo real", description: "Métricas live e KPIs confiáveis para agir rápido, sem achismo." },
+  { title: "Suporte contínuo", description: "Time de especialistas disponível sob demanda para evoluir sua operação." },
+  { title: "IA no seu processo", description: "Triagem, extração de dados e insights prontos no painel — IA onde faz diferença." },
+  { title: "Fluxos sem atrito", description: "Processos mapeados do início ao fim — menos passos, menos erros." },
+  { title: "Escalável e modular", description: "Arquitetura pensada para crescer sem refazer: APIs definidas e manutenção simples." },
 ] as const;
 
 export const PROCESS_STEPS = [
+  { step: "01", title: "Descoberta & Escopo", description: "Entendemos sua operação, desafios e objetivos de negócio." },
+  { step: "02", title: "Modelagem de Processos", description: "Mapeamos fluxos e definimos a solução ideal para cada etapa." },
+  { step: "03", title: "Arquitetura & Integrações", description: "Projetamos APIs, middleware e conexões entre sistemas." },
+  { step: "04", title: "Planejamento de Sprints", description: "Roadmap com entregas incrementais e marcos claros." },
+  { step: "05", title: "Desenvolvimento & Qualidade", description: "Construímos, testamos e validamos com rigor técnico." },
+  { step: "06", title: "Treinamento & Publicação", description: "Implantamos, capacitamos sua equipe e operamos em produção." },
+] as const;
+
+export const TECH_STACK = [
+  "Next.js", "React", "Node.js", "TypeScript", "Python",
+  "AWS", "Azure", "Docker", "Kubernetes", "PostgreSQL",
+  "GraphQL", "Redis", "Terraform", "GitHub Actions",
+] as const;
+
+export const TESTIMONIALS = [
   {
-    step: "01",
-    icon: Search,
-    title: "Analisamos seu negócio",
-    description:
-      "Entendemos seus processos, desafios e objetivos para identificar onde a tecnologia gera mais impacto.",
+    name: "Ricardo Mendes",
+    role: "CTO — TechCorp",
+    text: "A 3HB integrou nosso ERP ao CRM em semanas. O time entendeu nossa operação e entregou exatamente o que precisávamos — sem pacotes genéricos.",
   },
   {
-    step: "02",
-    icon: PenTool,
-    title: "Projetamos a solução",
-    description:
-      "Definimos arquitetura, escopo e roadmap — seja um site, um CRM, uma automação ou um sistema completo.",
+    name: "Fernanda Alves",
+    role: "Diretora de Operações — ScaleUp",
+    text: "Profissionais extremamente técnicos e atenciosos. A automação que implementaram reduziu nosso retrabalho em mais de 40%. Recomendo muito.",
   },
   {
-    step: "03",
-    icon: Rocket,
-    title: "Desenvolvemos e integramos",
-    description:
-      "Construímos, conectamos sistemas e implantamos com qualidade, segurança e escalabilidade.",
+    name: "Lucas Pereira",
+    role: "CEO — DataFlow",
+    text: "Parceiro estratégico de longo prazo. Desde a consultoria até a operação em cloud, a 3 HouseHub superou nossas expectativas em cada entrega.",
   },
   {
-    step: "04",
-    icon: Headphones,
-    title: "Operamos e evoluímos",
-    description:
-      "Acompanhamos resultados, damos suporte contínuo e evoluímos a solução conforme seu negócio cresce.",
+    name: "Camila Rocha",
+    role: "Head de TI — IntegraPro",
+    text: "Excelente custo-benefício e execução ágil. Conseguiram captar nossa necessidade de forma objetiva e entregar um sistema sob medida impecável.",
   },
 ] as const;
 
-export type SolutionCategory =
-  | "desenvolvimento"
-  | "web"
-  | "gestao"
-  | "automacao"
-  | "ia"
-  | "comunicacao"
-  | "analytics"
-  | "consultoria";
+export const BRAND_KEYWORDS = [
+  { key: "inovacao", label: "Inovação", icon: "lightbulb" as const, description: "Exploramos tecnologias emergentes para colocar sua empresa à frente do mercado." },
+  { key: "integracao", label: "Integração", icon: "puzzle" as const, description: "Conectamos sistemas, dados e processos em um ecossistema unificado." },
+  { key: "escalabilidade", label: "Escalabilidade", icon: "trending-up" as const, description: "Arquiteturas que crescem com seu negócio sem comprometer performance." },
+  { key: "precisao", label: "Precisão", icon: "target" as const, description: "Rigor técnico e atenção aos detalhes em cada entrega e integração." },
+] as const;
 
-export interface Solution {
-  id: string;
-  title: string;
-  description: string;
-  category: SolutionCategory;
-  categoryLabel: string;
-  icon: LucideIcon;
-  accent: string;
-  accentGlow: string;
-  metric?: string;
-  features: string[];
-}
-
-export const SOLUTION_CATEGORIES: Record<
-  SolutionCategory,
-  { label: string; color: string }
-> = {
-  desenvolvimento: { label: "Desenvolvimento", color: "#0570e8" },
-  web: { label: "Presença Digital", color: "#3b82f6" },
-  gestao: { label: "Gestão Comercial", color: "#6366f1" },
-  automacao: { label: "Automação", color: "#a855f7" },
-  ia: { label: "Inteligência Artificial", color: "#ec4899" },
-  comunicacao: { label: "Comunicação", color: "#22c55e" },
-  analytics: { label: "Analytics & BI", color: "#06b6d4" },
-  consultoria: { label: "Consultoria", color: "#f58220" },
-};
-
-export const SOLUTIONS: Solution[] = [
-  {
-    id: "sistemas",
-    title: "Sistemas Sob Medida",
-    description:
-      "Desenvolvimento de software personalizado para operações que exigem soluções exclusivas e escaláveis.",
-    category: "desenvolvimento",
-    categoryLabel: "Desenvolvimento",
-    icon: Code2,
-    accent: "#0570e8",
-    accentGlow: "rgba(5, 112, 232, 0.2)",
-    metric: "Full-stack",
-    features: ["Arquitetura custom", "APIs", "Escalável"],
-  },
-  {
-    id: "plataformas",
-    title: "Plataformas Web",
-    description:
-      "Criação de plataformas web robustas para gestão, operação e interação com clientes e equipes.",
-    category: "desenvolvimento",
-    categoryLabel: "Desenvolvimento",
-    icon: Monitor,
-    accent: "#1a8cff",
-    accentGlow: "rgba(26, 140, 255, 0.2)",
-    metric: "Cloud-ready",
-    features: ["Multi-usuário", "Painéis", "Responsivo"],
-  },
-  {
-    id: "portais",
-    title: "Portais Corporativos",
-    description:
-      "Portais internos e externos para centralizar informações, processos e comunicação da empresa.",
-    category: "desenvolvimento",
-    categoryLabel: "Desenvolvimento",
-    icon: Building2,
-    accent: "#2563eb",
-    accentGlow: "rgba(37, 99, 235, 0.2)",
-    features: ["Intranet", "Extranet", "SSO"],
-  },
-  {
-    id: "apps",
-    title: "Aplicações Empresariais",
-    description:
-      "Apps corporativos para automatizar rotinas, conectar equipes e dar mobilidade à operação.",
-    category: "desenvolvimento",
-    categoryLabel: "Desenvolvimento",
-    icon: Layers,
-    accent: "#3b82f6",
-    accentGlow: "rgba(59, 130, 246, 0.2)",
-    features: ["Web & Mobile", "Offline", "Integrado"],
-  },
-  {
-    id: "saas",
-    title: "Soluções SaaS",
-    description:
-      "Produtos em nuvem com assinatura, multi-tenant e infraestrutura preparada para escalar.",
-    category: "desenvolvimento",
-    categoryLabel: "Desenvolvimento",
-    icon: Cloud,
-    accent: "#60a5fa",
-    accentGlow: "rgba(96, 165, 250, 0.2)",
-    metric: "Multi-tenant",
-    features: ["Assinatura", "Escalável", "API-first"],
-  },
-  {
-    id: "sites",
-    title: "Sites Institucionais",
-    description:
-      "Sites profissionais que transmitem credibilidade, performance e identidade da sua marca.",
-    category: "web",
-    categoryLabel: "Presença Digital",
-    icon: Globe,
-    accent: "#3b82f6",
-    accentGlow: "rgba(59, 130, 246, 0.2)",
-    features: ["SEO", "Performance", "Responsivo"],
-  },
-  {
-    id: "landing",
-    title: "Landing Pages",
-    description:
-      "Páginas de alta conversão para campanhas, lançamentos e captação de leads qualificados.",
-    category: "web",
-    categoryLabel: "Presença Digital",
-    icon: Layout,
-    accent: "#60a5fa",
-    accentGlow: "rgba(96, 165, 250, 0.2)",
-    metric: "Alta conversão",
-    features: ["A/B Testing", "Analytics", "Integração CRM"],
-  },
-  {
-    id: "ecommerce",
-    title: "E-commerce",
-    description:
-      "Lojas virtuais completas com gestão de produtos, pagamentos, estoque e experiência de compra.",
-    category: "web",
-    categoryLabel: "Presença Digital",
-    icon: ShoppingCart,
-    accent: "#f58220",
-    accentGlow: "rgba(245, 130, 32, 0.2)",
-    features: ["Checkout", "Estoque", "Marketplace"],
-  },
-  {
-    id: "crm",
-    title: "CRM & Gestão Comercial",
-    description:
-      "O Faex CRM — uma das nossas soluções — para pipeline, leads, vendas e relacionamento com clientes.",
-    category: "gestao",
-    categoryLabel: "Gestão Comercial",
-    icon: Users,
-    accent: "#6366f1",
-    accentGlow: "rgba(99, 102, 241, 0.2)",
-    metric: "Faex CRM",
-    features: ["Pipeline", "Lead Scoring", "Histórico 360°"],
-  },
-  {
-    id: "automacao",
-    title: "Automação de Processos",
-    description:
-      "Fluxos inteligentes que eliminam tarefas manuais e conectam etapas da sua operação automaticamente.",
-    category: "automacao",
-    categoryLabel: "Automação",
-    icon: Workflow,
-    accent: "#a855f7",
-    accentGlow: "rgba(168, 85, 247, 0.2)",
-    metric: "No-code + Pro",
-    features: ["Fluxos visuais", "Gatilhos", "Webhooks"],
-  },
-  {
-    id: "integracoes",
-    title: "Integrações entre Sistemas",
-    description:
-      "Conectamos ERPs, CRMs, gateways, APIs e ferramentas para unificar dados e processos.",
-    category: "automacao",
-    categoryLabel: "Automação",
-    icon: Plug,
-    accent: "#8b5cf6",
-    accentGlow: "rgba(139, 92, 246, 0.2)",
-    metric: "API REST",
-    features: ["Webhooks", "ETL", "Middleware"],
-  },
-  {
-    id: "ia",
-    title: "Inteligência Artificial",
-    description:
-      "IA aplicada ao negócio: análise preditiva, classificação automática e insights para decisões rápidas.",
-    category: "ia",
-    categoryLabel: "Inteligência Artificial",
-    icon: Brain,
-    accent: "#ec4899",
-    accentGlow: "rgba(236, 72, 153, 0.2)",
-    metric: "ML integrado",
-    features: ["Previsões", "NLP", "Análise de dados"],
-  },
-  {
-    id: "agentes",
-    title: "Agentes de IA",
-    description:
-      "Assistentes virtuais autônomos para atendimento, qualificação, suporte e execução de tarefas.",
-    category: "ia",
-    categoryLabel: "Inteligência Artificial",
-    icon: Bot,
-    accent: "#f472b6",
-    accentGlow: "rgba(244, 114, 182, 0.2)",
-    metric: "24/7",
-    features: ["Atendimento IA", "RAG", "Automação"],
-  },
-  {
-    id: "telefonia",
-    title: "Telefonia Corporativa",
-    description:
-      "VoIP, webphone, discador automático e URA — telefonia em nuvem integrada à sua operação.",
-    category: "comunicacao",
-    categoryLabel: "Comunicação",
-    icon: Phone,
-    accent: "#22c55e",
-    accentGlow: "rgba(34, 197, 94, 0.2)",
-    metric: "99.9% uptime",
-    features: ["VoIP", "Discador", "Gravação"],
-  },
-  {
-    id: "omnichannel",
-    title: "WhatsApp & Omnichannel",
-    description:
-      "Central de atendimento unificada com WhatsApp, redes sociais e multiatendimento integrado.",
-    category: "comunicacao",
-    categoryLabel: "Comunicação",
-    icon: MessageCircle,
-    accent: "#10b981",
-    accentGlow: "rgba(16, 185, 129, 0.2)",
-    metric: "API Oficial",
-    features: ["Filas", "Chatbot", "Multi-canal"],
-  },
-  {
-    id: "bi",
-    title: "Dashboards & BI",
-    description:
-      "Business Intelligence com painéis em tempo real, KPIs customizados e relatórios estratégicos.",
-    category: "analytics",
-    categoryLabel: "Analytics & BI",
-    icon: BarChart3,
-    accent: "#06b6d4",
-    accentGlow: "rgba(6, 182, 212, 0.2)",
-    metric: "Tempo real",
-    features: ["KPIs", "Exportação", "Alertas"],
-  },
-  {
-    id: "consultoria",
-    title: "Consultoria Tecnológica",
-    description:
-      "Diagnóstico, planejamento e orientação estratégica para escolher e implementar a tecnologia certa.",
-    category: "consultoria",
-    categoryLabel: "Consultoria",
-    icon: Lightbulb,
-    accent: "#f58220",
-    accentGlow: "rgba(245, 130, 32, 0.2)",
-    metric: "Estratégica",
-    features: ["Diagnóstico", "Roadmap", "Arquitetura"],
-  },
-];
-
-export interface Capability {
-  id: string;
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  accent: string;
-  accentGlow: string;
-  highlights: string[];
-}
-
-export const CAPABILITIES: Capability[] = [
-  {
-    id: "desenvolvimento",
-    title: "Desenvolvimento de Software",
-    description:
-      "Sistemas, plataformas, portais, apps empresariais e soluções SaaS desenvolvidos sob medida para sua operação.",
-    icon: Code2,
-    accent: "#0570e8",
-    accentGlow: "rgba(5, 112, 232, 0.2)",
-    highlights: ["Sistemas custom", "Plataformas web", "Apps empresariais", "SaaS"],
-  },
-  {
-    id: "web",
-    title: "Presença Digital",
-    description:
-      "Sites institucionais, landing pages e e-commerce com design profissional, performance e conversão.",
-    icon: Globe,
-    accent: "#3b82f6",
-    accentGlow: "rgba(59, 130, 246, 0.2)",
-    highlights: ["Sites institucionais", "Landing pages", "E-commerce"],
-  },
-  {
-    id: "gestao",
-    title: "Gestão & CRM",
-    description:
-      "Soluções de gestão comercial incluindo o Faex CRM — uma entre diversas ferramentas que desenvolvemos e operamos.",
-    icon: Users,
-    accent: "#6366f1",
-    accentGlow: "rgba(99, 102, 241, 0.2)",
-    highlights: ["Faex CRM", "Pipeline de vendas", "Gestão comercial"],
-  },
-  {
-    id: "automacao",
-    title: "Automação & Integrações",
-    description:
-      "Automatizamos processos e conectamos sistemas para eliminar retrabalho e unificar sua operação.",
-    icon: Workflow,
-    accent: "#a855f7",
-    accentGlow: "rgba(168, 85, 247, 0.2)",
-    highlights: ["Fluxos automáticos", "APIs", "Integrações"],
-  },
-  {
-    id: "ia",
-    title: "Inteligência Artificial",
-    description:
-      "IA e agentes autônomos integrados aos seus processos para decisões mais rápidas e operação inteligente.",
-    icon: Brain,
-    accent: "#ec4899",
-    accentGlow: "rgba(236, 72, 153, 0.2)",
-    highlights: ["IA aplicada", "Agentes autônomos", "Análise preditiva"],
-  },
-  {
-    id: "comunicacao",
-    title: "Comunicação Corporativa",
-    description:
-      "Telefonia VoIP, discador, WhatsApp e atendimento omnichannel para comunicação profissional em escala.",
-    icon: Phone,
-    accent: "#22c55e",
-    accentGlow: "rgba(34, 197, 94, 0.2)",
-    highlights: ["VoIP", "Discador", "WhatsApp", "Omnichannel"],
-  },
-  {
-    id: "analytics",
-    title: "Analytics & BI",
-    description:
-      "Dashboards e Business Intelligence para visualizar performance e tomar decisões baseadas em dados.",
-    icon: BarChart3,
-    accent: "#06b6d4",
-    accentGlow: "rgba(6, 182, 212, 0.2)",
-    highlights: ["Dashboards", "KPIs", "Relatórios"],
-  },
-  {
-    id: "consultoria",
-    title: "Consultoria Tecnológica",
-    description:
-      "Analisamos seu negócio e orientamos a melhor estratégia tecnológica — do diagnóstico à implementação.",
-    icon: Lightbulb,
-    accent: "#f58220",
-    accentGlow: "rgba(245, 130, 32, 0.2)",
-    highlights: ["Diagnóstico", "Planejamento", "Roadmap"],
-  },
-];
+export const PARTNERS = [
+  "TechCorp", "DataFlow", "CloudSync", "IntegraPro",
+  "ScaleUp", "NexusLab", "PrimeTech", "VertexIO",
+] as const;
