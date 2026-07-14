@@ -5,7 +5,7 @@ export const SITE = {
   description:
     "A 3 HouseHub conecta tecnologia, estratégia e execução para criar soluções escaláveis e precisas para empresas B2B.",
   url: "https://3househub.com.br",
-  email: "master@faextech.com.br",
+  email: "contato@3househub.com.br",
   phone: "+554135283876",
   phoneDisplay: "+55 41 3528-3876",
   whatsapp: "554135283876",
